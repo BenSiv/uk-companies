@@ -1,12 +1,12 @@
 -- analysing uk companies
 
 require("utils").using("utils")
-using("delimited_files")
 using("dataframes")
+using("database")
 
 function main()
-	local data = readdlm("data/companies-2024-11-01.csv", ",", true)
-	view(data[1])
+	result = local_query("data/companies.db", "")
+	view()
 	-- return 
 end
 
